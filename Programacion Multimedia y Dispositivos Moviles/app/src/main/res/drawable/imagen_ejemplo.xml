@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="200dp"
+    android:viewportWidth="360"
+    android:viewportHeight="200">
+    <!-- Imagen de ejemplo para avisos sin foto -->
+    <path
+        android:fillColor="#1F1A2E"
+        android:pathData="M0,0h360v200H0z" />
+    <path
+        android:fillColor="#362E4D"
+        android:pathData="M0,170L90,96l58,44 44,-34 78,64 40,-28 50,38v20H0z" />
+    <path
+        android:fillColor="#4A3F63"
+        android:pathData="M270,46a22,22 0 1,0 0.1,0z" />
+    <path
+        android:fillColor="#A8A0B8"
+        android:pathData="M176,58h8v44h-8zM180,98l-28,20h56z" />
+    <path
+        android:fillColor="#7B42BC"
+        android:pathData="M148,80h64v10h-64z" />
+</vector>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema oscuro obligatorio de la app -->
+    <style name="Theme.FixitCampus" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@color/fondo</item>
+        <item name="android:statusBarColor">@color/fondo</item>
+        <item name="android:navigationBarColor">@color/fondo</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="colorPrimary">@color/morado</item>
+        <item name="colorPrimaryDark">@color/fondo</item>
+        <item name="colorAccent">@color/morado</item>
+        <item name="android:textColorPrimary">@color/texto</item>
+        <item name="android:textColorSecondary">@color/secundario</item>
+        <item name="android:textColorHint">@color/secundario</item>
+    </style>
+
+    <!-- Estilo del diálogo de elegir cámara o galería -->
+    <style name="DialogoFoto" parent="Theme.MaterialComponents.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/bg_dialog_foto</item>
+        <item name="android:textColorPrimary">@color/texto</item>
+        <item name="android:textColorAlertDialogListItem">@color/texto</item>
+        <item name="colorAccent">@color/morado</item>
+    </style>
+</resources>

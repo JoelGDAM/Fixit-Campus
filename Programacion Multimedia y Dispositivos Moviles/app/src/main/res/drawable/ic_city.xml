@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="110dp"
+    android:viewportWidth="360"
+    android:viewportHeight="110">
+    <!-- Silueta morada de edificios del campus -->
+    <path
+        android:fillColor="#7B42BC"
+        android:fillAlpha="0.9"
+        android:pathData="M8,110V52h48v58zM62,110V68h40v42zM108,110V34h52v76zM166,110V58h6V46h4v12h6v52zM188,110V46h56v64zM250,110V74h38v36zM294,110V40h48v70z" />
+    <path
+        android:fillColor="#130F1D"
+        android:pathData="M118,44h8v8h-8zM132,44h8v8h-8zM146,44h6v8h-6zM118,60h8v8h-8zM132,60h8v8h-8zM146,60h6v8h-6zM118,76h8v8h-8zM132,76h8v8h-8zM146,76h6v8h-6zM198,58h8v8h-8zM212,58h8v8h-8zM226,58h6v8h-6zM198,74h8v8h-8zM212,74h8v8h-8zM226,74h6v8h-6zM304,52h8v8h-8zM318,52h8v8h-8zM304,68h8v8h-8zM318,68h8v8h-8zM304,84h8v8h-8zM318,84h8v8h-8zM18,64h8v8h-8zM32,64h8v8h-8zM18,80h8v8h-8zM32,80h8v8h-8zM72,80h8v8h-8zM86,80h8v8h-8zM260,84h8v8h-8zM274,84h8v8h-8z" />
+</vector>

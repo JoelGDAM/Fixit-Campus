@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingStart="28dp"
+    android:paddingTop="64dp"
+    android:paddingEnd="28dp"
+    android:paddingBottom="24dp">
+
+    <ImageView
+        android:id="@+id/ivCheck"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:contentDescription="Aviso enviado"
+        android:src="@drawable/ic_check_circle" />
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Aviso enviado"
+        android:textColor="@color/texto"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:text="Hemos registrado el aviso FIX-005. Te avisaremos cuando cambie su estado."
+        android:textColor="@color/secundario"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btnVerAviso"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/bg_button_primary"
+        android:text="Ver mi aviso"
+        android:textAllCaps="false"
+        android:textColor="@color/texto"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_button_outline"
+        android:text="Volver a mis avisos"
+        android:textAllCaps="false"
+        android:textColor="@color/texto"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="Campus"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_city" />
+
+</LinearLayout>
