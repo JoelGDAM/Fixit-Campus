@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import java.io.File
 
-// M4 - Detalle de un aviso con historial y comentarios
+// Detalle de un aviso con historial y comentarios
 class DetalleAvisoActivity : AppCompatActivity() {
 
     private lateinit var db: DbHelper

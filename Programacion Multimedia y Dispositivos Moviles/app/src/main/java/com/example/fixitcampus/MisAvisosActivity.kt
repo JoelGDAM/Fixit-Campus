@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-// M2 - Listado de avisos del usuario logueado
+// Listado de avisos del usuario
 class MisAvisosActivity : AppCompatActivity() {
 
     private lateinit var db: DbHelper

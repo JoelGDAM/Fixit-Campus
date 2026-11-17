@@ -13,7 +13,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-// M1 - Pantalla de inicio de sesión
+// Pantalla de inicio de sesión
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var db: DbHelper
@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
         etPassword = findViewById(R.id.etPassword)
         tvError = findViewById(R.id.tvError)
 
-        // Mostrar u ocultar la contraseña
+        // Mostrar y ocultar la contraseña
         findViewById<ImageView>(R.id.ivOjo).setOnClickListener {
             mostrarPassword = !mostrarPassword
             if (mostrarPassword) {

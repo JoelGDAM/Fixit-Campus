@@ -12,7 +12,7 @@ import java.util.Date
 // Usuario devuelto por el login
 data class Usuario(val id: Int, val nombre: String, val email: String)
 
-// Acceso a la base de datos SQLite (fixit.db)
+// Acceso a la base de datos SQLite 
 class DbHelper(context: Context) : SQLiteOpenHelper(context, "fixit.db", null, 1) {
 
     override fun onCreate(db: SQLiteDatabase) {
@@ -37,7 +37,7 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "fixit.db", null, 1
         onCreate(db)
     }
 
-    // ---------- Hash SHA-256 con salt ----------
+    // Hash 256 para la proteccion de contraseñas
     fun crearHash(pass: String, salt: String): String {
         val digest = MessageDigest.getInstance("SHA-256")
         val bytes = digest.digest((salt + pass).toByteArray())
@@ -59,7 +59,7 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "fixit.db", null, 1
         return usuario
     }
 
-    // ---------- Datos para los spinners ----------
+    // Spinners
     fun listarEdificios(): List<Pair<Int, String>> = listaSimple("SELECT id, nombre FROM edificios ORDER BY id")
 
     fun listarEspacios(edificioId: Int): List<Pair<Int, String>> =
@@ -75,7 +75,7 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "fixit.db", null, 1
         return lista
     }
 
-    // ---------- Avisos ----------
+    // Avisos
     fun listarIncidencias(usuarioId: Int, filtro: String, texto: String): List<Aviso> {
         val lista = mutableListOf<Aviso>()
         var sql = "SELECT i.id, i.codigo, e.nombre, c.nombre, i.prioridad, i.estado, i.descripcion, " +
@@ -155,7 +155,7 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "fixit.db", null, 1
         return codigo
     }
 
-    // ---------- Historial y comentarios ----------
+    // Historial y comentarios 
     fun listarHistorial(incidenciaId: Int): List<HistorialItem> {
         val lista = mutableListOf<HistorialItem>()
         val c = readableDatabase.rawQuery(
@@ -195,7 +195,7 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "fixit.db", null, 1
         writableDatabase.insert("comentarios", null, v)
     }
 
-    // ---------- Datos precargados ----------
+    // Precargados
     private fun sembrar(db: SQLiteDatabase) {
         insertarUsuario(db, 1, "Alumno Campus", "alumno@campus.es", "s4l4l")
         insertarUsuario(db, 2, "María López", "maria@campus.es", "m4r14")
@@ -222,7 +222,7 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "fixit.db", null, 1
 
         val hace15min = formatoFecha(Date(System.currentTimeMillis() - 15 * 60 * 1000))
 
-        // FIX-001 (resuelta)
+        // FIX-001 resuelta
         insertarAvisoSeed(db, 1, "FIX-001", 1, 4, 4, "El proyector del aula no enciende.", "Alta", "RESUELTA", "12 nov, 09:15", "13 nov")
         insertarHistorialSeed(db, 1, "Aviso creado", "12 nov, 09:15")
         insertarHistorialSeed(db, 1, "Resuelta", "13 nov, 11:40")
@@ -231,7 +231,7 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "fixit.db", null, 1
         insertarAvisoSeed(db, 2, "FIX-002", 1, 5, 5, "Silla rota en la tercera fila.", "Media", "ABIERTA", "10 nov, 11:40", "13 nov")
         insertarHistorialSeed(db, 2, "Aviso creado", "10 nov, 11:40")
 
-        // FIX-003 (con historial y comentario del técnico)
+        // FIX-003 con historial y comentario del técnico
         insertarAvisoSeed(db, 3, "FIX-003", 1, 1, 4, "El proyector no muestra imagen desde esta mañana.", "Alta", "ABIERTA", "12 nov, 09:15", "13 nov")
         insertarHistorialSeed(db, 3, "Aviso creado", "12 nov, 09:15")
         insertarHistorialSeed(db, 3, "En revisión por el técnico", "13 nov, 09:30")
@@ -242,7 +242,7 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "fixit.db", null, 1
         comentario.put("fecha", "Hoy, 10:30")
         db.insert("comentarios", null, comentario)
 
-        // FIX-004 (el más reciente)
+        // FIX-004 
         insertarAvisoSeed(db, 4, "FIX-004", 1, 2, 2, "Gotera de grifo en el techo del aula.", "Baja", "ABIERTA", hace15min, "Hoy")
         insertarHistorialSeed(db, 4, "Aviso creado", hace15min)
     }

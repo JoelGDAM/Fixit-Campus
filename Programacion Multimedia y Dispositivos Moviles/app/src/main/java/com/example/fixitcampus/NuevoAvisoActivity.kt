@@ -25,7 +25,7 @@ import com.google.android.material.card.MaterialCardView
 import com.google.android.material.switchmaterial.SwitchMaterial
 import java.io.File
 
-// M3 - Formulario para crear un aviso
+// Formulario para crear un aviso
 class NuevoAvisoActivity : AppCompatActivity() {
 
     private lateinit var db: DbHelper
@@ -138,7 +138,7 @@ class NuevoAvisoActivity : AppCompatActivity() {
         idEspacio = 0
     }
 
-    // ---------- Foto ----------
+    // Foto
     private fun dialogoFoto() {
         val opciones = arrayOf("Hacer foto", "Subir de galería")
         AlertDialog.Builder(this, R.style.DialogoFoto)
@@ -216,7 +216,7 @@ class NuevoAvisoActivity : AppCompatActivity() {
         mcvFotoPreview.visibility = View.VISIBLE
     }
 
-    // ---------- Guardar aviso ----------
+    // Guardar aviso
     private fun enviar() {
         val descripcion = etDescripcion.text.toString().trim()
         var correcto = true
@@ -280,7 +280,7 @@ class NuevoAvisoActivity : AppCompatActivity() {
         mostrarConfirmacion(id)
     }
 
-    // M3-b - Pantalla de confirmación
+    // Pantalla de confirmación
     private fun mostrarConfirmacion(id: Int) {
         setContentView(R.layout.activity_confirmacion)
 
